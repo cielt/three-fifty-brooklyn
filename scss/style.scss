@@ -1,0 +1,9 @@
+@import './normalize.scss';
+@import './config.scss';
+
+
+html {
+  font-family: $b-fontFamily;
+  color: $brand350-blue0;
+  font-size: percentage(6/7);
+}

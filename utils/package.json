@@ -1,0 +1,23 @@
+{
+  "name": "350brooklyn-utils",
+  "version": "1.0.0",
+  "description": "For 350 Brooklyn web",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "three-fifty-brooklyn"
+  },
+  "author": "350Brooklyn",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-cssnano": "^2.1.3"
+  }
+}

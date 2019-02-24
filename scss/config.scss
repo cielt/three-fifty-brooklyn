@@ -1,0 +1,115 @@
+// =====================================
+//
+//   Config
+//   -> defaults, settings
+//
+// =====================================
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// ----- Libre Baskerville 400, 700 ----- //
+// ----- Oswald 300, 400 ----- //
+
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// Brand Colors
+
+$brand350-blue0: #0F81E8;
+$brand350-blue-green0: #40D7D4;
+$brand350-pale-blue0: #E6F0FA;
+$brand350-blue-grey0: #6D7C88;
+$brand350-gold-orange0: #FFA902;
+$brand350-red-orange0: #FF6112;
+$brand350-green-black0: #17292E;
+
+$grey0: #FAFAFA;
+$grey1: #F4F4F4;
+$grey2: #E0E0E0;
+$grey3: #CCC;
+$grey4: #BEBEBE;
+$grey5: #808080;
+$grey6: #333;
+
+$black: #000;
+$white: #fff;
+$clear: transparent;
+
+// ----- Context Names ----- //
+
+$c-background: $white;
+$c-text: $black;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Typography ----- //
+
+$b-fontFamily: sans-serif;
+$b-heading-fontFamily: $b-fontFamily;
+$b-fontSize: 16px; // HTML
+$b-fontSize-xs: em(12px);
+$b-fontSize-s: em(14px);
+$b-fontSize-l: em(18px);
+$b-fontSize-xl: em(24px);
+$b-fontSize-xxl: em(30px);
+$b-fontSize-h1: em(40px);
+$b-fontSize-xxxl: em(56px);
+$b-fontSize-h2: $b-fontSize-xl;
+$b-fontSize-h3: $b-fontSize-l;
+$b-fontSize-h4: em(17px);
+$b-lineHeight: 1.8;
+$b-lineHeight-compact: 1.5;
+
+// ----- Border Radius ----- //
+
+$b-borderRad-1: 3px;
+$b-borderRad-2: 6px;
+$b-borderRad-3: 12px;
+$b-borderStyle: solid;
+
+// ----- Border Width ----- //
+
+$b-borderWidth-xs: 1px;
+$b-borderWidth-s: 2px;
+$b-borderWidth-m: 3px;
+
+// ----- Sizing ----- //
+
+$b-maxWidth: em(1440px);
+$b-space-1: em(5px);
+$b-space-2: em(10px); // v spacing, default type
+$b-space-3: em(15px);
+$b-space-4: em(20px); // gutter
+$b-space-5: em(30px);
+$b-space-6: em(60px);
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
+
+// Breakpoints
+
+$g-xs: em(480px);
+$g-s: em(768px);
+$g-m: em(959px);
+$g-l: em(1200px);
+
+// Settings
+
+$g-columns: 12;
+$g-defaults: 'xs' $g-xs, 's' $g-s, 'm' $g-m, 'l' $g-l;
+$g-gutter: $b-space-4; // 20px
+$g-silent: false;
+
+// Selector
+
+$g-selector: if($g-silent, unquote("%"), unquote("."));
+
