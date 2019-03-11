@@ -1,0 +1,23 @@
+// =====================================
+//
+//   Button
+//   -> mixins, functions, extends, animations
+//
+// =====================================
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+.btn-round {
+  display: inline-block;
+  padding: 0 $b-space-3;
+  line-height: 2;
+  border-radius: 16px;
+
+  &.btn-orange {
+    color: $white;
+    background-color: $brand350-gold-orange0;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  }
+}

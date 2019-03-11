@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <script src="https://use.fontawesome.com/3befb0232d.js"></script>
+  <title>We are 350 Brooklyn | Home</title>
+</head>
+
+<body class="350bk-home nav-closed" data-layout="350bk-home">
+  <div id="page" class="page">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <div class="scaffold-outer p-rel">
+      <div class="scaffold-inner">
+        <header id="masthead" class="site-header">
+          <!-- LOGO home link -->
+          <div class="site-branding">
+            <a href="index.html" id="logo-home-link">
+              <span class="vis-hidden">Back to 350 Brooklyn Home</span>
+            </a>
+          </div><!-- .site-branding -->      
+          <nav id="site-navigation" class="main-navigation max-w">
+            <!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Toggle Menu</button> -->
+            <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
+              <li id="menu-item-22" class="menu-item menu-item-has-children menu-item-22"><a href="#">About Us</a>
+                <!-- <ul class="sub-menu">
+                  <li id="menu-item-23" class="menu-item menu-item-23">
+                    <a href="#">How We Work</a>
+                  </li>
+                </ul> -->
+              </li>
+              <li id="menu-item-24" class="menu-item menu-item-24">
+                <a href="#">Campaigns</a>
+              </li>
+              <li id="menu-item-25" class="menu-item menu-item-25">
+                <a href="#">News &amp; Events</a>
+              </li>
+              <li id="home-logo-link-spacer" class="menu-item logo-link-spacer">
+                <!-- HOME LOGO LINK spacer -->
+              </li>
+              <li id="menu-item-30" class="menu-item menu-item-30">
+                <a href="#">Climate Science</a>
+              </li>
+              <li id="menu-item-31" class="menu-item menu-item-31">
+                <a href="#">Resources</a>
+              </li>
+              <li id="menu-item-32" class="menu-item menu-item-32">
+                <a href="#"><span class="btn-round btn-orange">Donate</span></a>
+              </li>
+            </ul>
+          </nav><!-- #site-navigation -->
+        </header><!-- #masthead -->
+        <div id="content" class="main p-rel z2">
+          <div class="header-spacing"></div>
+          <!-- ################################################## HERO AREA ################################################## -->
+          <div class="marquee-main home-cover w-max mx-auto p-rel">
+            <div class="slide-frame">
+              <div id="home-hero-slide" class="slide-1 slide-image"></div>
+            </div>  
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+              <div class="title-block">
+                <h1 class="h1 m--ts-xxxl site-title c-white mb-0">We are 350 Brooklyn</h1>
+                <span class="h2 site-description mt-1">We&rsquo;re fighting for a safe climate, and a better future.</span>
+              </div>
+              <a href="#page-content" class="scroll-to-content-btn" data-offset="0">
+                <b class="fa fa-angle-down fa-2x" aria-hidden="true"></b>
+                <span class="vis-hidden">scroll down to page content</span>
+              </a>
+            </div>
+          </div>
+          <!-- ################################################## Section ################################################## -->
+          <div class="section bg-white" id="page-content">
+            <div class="max-w pt-5 pb-5">
+              <!-- Drop Content here -->
+            </div>
+          </div> 
+        </div>
+        <div class="footer p-rel z1">
+          <div class="max-w">  
+            <div class="footer-content">
+              <!-- Drop Content here -->
+              <div class="copyright"><p class="ts-s c-blueGrey0 italic">&copy; 2019 350 Brooklyn</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="../../js/utils.js"></script>
+<script>
+  (function ($) {
+    'use strict';
+
+    var BROOKLYN_350 = {};
+
+    $(function () {
+      var $body = $('body'),
+          $scrollDownArrow = $body.find('.scroll-to-content-btn');
+      $scrollDownArrow.arctic_scroll();    
+    });
+  })(jQuery);
+</script>
+</html>

@@ -1,0 +1,263 @@
+// =====================================
+//
+//   350 Brooklyn
+//   -> branding, structures, components
+//
+// =====================================
+
+// TODO: break me down into modules
+
+// -------------------------------------
+//   BASE - global defaults
+// -------------------------------------
+
+html {
+  box-sizing: border-box;
+  font-family: $b-fontFamily;
+  color: $black;
+  font-size: $b-fontSize;
+}
+
+/*
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal;
+  margin: 0 0 0.5em 0;
+}
+
+.max-w {
+  max-width: $b-maxWidth;
+  margin: 0 auto;
+}
+
+
+// -------------------------------------
+//   GLOBAL
+// -------------------------------------
+
+.page {
+  position: relative;
+}
+
+// -------------------------------------
+//   Z-indices
+// -------------------------------------
+
+#masthead {
+  position: fixed;
+  z-index: 2;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+// ----- #a11y :: Skip to Link ----- //
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: em(-10000px);
+  display: block;
+  width: auto;
+  line-height: 2;
+  font-weight: bold;
+  font-size: $b-fontSize-s;
+  background-color: $brand350-green-black0;
+  color: $white;
+  text-align: center;
+  padding: 0 $b-space-2;
+  text-decoration: none;
+
+  &:focus {
+    margin-left: 0;
+    outline: none;
+  }
+}
+
+// -------------------------------------
+//   HEADER
+// -------------------------------------
+
+#masthead {
+  background: $brand350-blue0;
+  color: $white;
+  height: $b-header-height;
+  width: 100%;
+}
+
+//  Logo Home Link
+.site-branding {
+  position: absolute;
+  width: em(208px);
+  height: $b-header-height;
+  left: 50%;
+  margin-left: -(em(208px)/2);
+  top: 0;
+
+  #logo-home-link {
+    display: block;
+    width: em(208px);
+    height: $b-header-height;
+    background: url(images/logo-350brooklyn-white.svg) $clear no-repeat center center;
+  }
+}
+
+
+.menu.nav-menu {
+  display: grid;
+  grid-gap: $b-space-4;
+  grid-template-columns: repeat(auto-fit, minmax($b-global-menu-minWidth, 1fr));
+
+  .logo-link-spacer {
+    grid-column: span 2;
+    height: $b-header-height;
+  }
+
+  // link styles
+  a:link {
+    display: block;
+    color: $white;
+    line-height: $b-header-height;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px
+  }
+}
+
+.menu, .sub-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// -------------------------------------
+//   CONTENT :: HERO AREA
+// -------------------------------------
+
+.header-spacing {
+  // height: $b-header-height;
+  position: relative;
+}
+
+// marquee image frame
+.marquee-main {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  width: 100%;
+  position: relative;
+  background-color: $black;
+  height: 100vh;
+
+  .slide-frame {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    min-height: em(240px);
+    overflow: hidden;
+    background: $black no-repeat center center;
+    background-size: cover;
+    
+    &.slide-1 {
+      background-image: url(images/home-hero-sandy-brooklyn-bridge.jpg);
+    }
+  }
+
+  .hero-overlay {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.72);
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    transition: opacity 0.6s ease;
+    opacity: 0.48;
+  }
+
+  .hero-text {
+    width: 100vw;
+    height: 100vh;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    position: relative;
+    color: $white;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.072);
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr em(60px);
+
+    .title-block {
+      grid-row: 1/2;
+    }
+
+    .scroll-to-content-btn {
+      grid-row: 2/-1;
+    }
+  }
+}
+
+// HERO AREA
+.marquee-main {
+  a:link, a:visited, a:active, a:hover {
+    color: $white;
+  }
+}
+
+.marquee-main:hover {
+  .hero-overlay {
+    box-shadow:         inset 0 0 em(48px) $black;
+    opacity: 0.84;
+  }
+}
+
+.scroll-to-content-btn {
+  width: em(48px, 24px);
+  height: em(48px, 24px);
+  line-height: em(48px, 24px);
+  text-align: center;
+  font-size: $b-fontSize-xl;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  -webkit-animation: bounce 4s 2s infinite;
+  animation: bounce 4s 2s infinite;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  z-index: 3;
+
+  &:hover, &:focus {
+    -webkit-animation: none;
+    animation: bounce none;
+    background-color: rgba(255, 255, 255, 0.36);   
+  }
+}

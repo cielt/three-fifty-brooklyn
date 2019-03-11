@@ -1,9 +1,7 @@
-@import './normalize.scss';
-@import './config.scss';
+@import './normalize';
+@import './utils';
+@import './config';
+@import './three-fifty-brooklyn';
 
-
-html {
-  font-family: $b-fontFamily;
-  color: $brand350-blue0;
-  font-size: percentage(6/7);
-}
+@import './components/button';
+@import './tools';

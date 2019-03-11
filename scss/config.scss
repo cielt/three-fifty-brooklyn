@@ -50,7 +50,7 @@ $c-text: $black;
 
 // ----- Typography ----- //
 
-$b-fontFamily: sans-serif;
+$b-fontFamily: "helvetica neue", helvetica, sans-serif;
 $b-heading-fontFamily: $b-fontFamily;
 $b-fontSize: 16px; // HTML
 $b-fontSize-xs: em(12px);
@@ -63,14 +63,12 @@ $b-fontSize-xxxl: em(56px);
 $b-fontSize-h2: $b-fontSize-xl;
 $b-fontSize-h3: $b-fontSize-l;
 $b-fontSize-h4: em(17px);
-$b-lineHeight: 1.8;
-$b-lineHeight-compact: 1.5;
+$b-lineHeight: 1.5;
 
 // ----- Border Radius ----- //
 
 $b-borderRad-1: 3px;
 $b-borderRad-2: 6px;
-$b-borderRad-3: 12px;
 $b-borderStyle: solid;
 
 // ----- Border Width ----- //
@@ -107,9 +105,13 @@ $g-l: em(1200px);
 $g-columns: 12;
 $g-defaults: 'xs' $g-xs, 's' $g-s, 'm' $g-m, 'l' $g-l;
 $g-gutter: $b-space-4; // 20px
-$g-silent: false;
 
-// Selector
+// CSS Grid
 
-$g-selector: if($g-silent, unquote("%"), unquote("."));
+$b-global-menu-minWidth: em(120px);
+
+
+// Structures - Sizes
+
+$b-header-height: em(54px);
 

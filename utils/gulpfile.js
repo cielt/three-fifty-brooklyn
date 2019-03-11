@@ -12,7 +12,7 @@ function clean(cb) {
 }
 
 function compileSass() {
-  return src('../scss/**/*.scss')
+  return src('../scss/style.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulpIf('*.css', cssNano()))
   .pipe(dest('../'));
