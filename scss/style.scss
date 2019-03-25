@@ -3,5 +3,11 @@
 @import './config';
 @import './three-fifty-brooklyn';
 
+/* Components */
 @import './components/button';
+
+/* Structures */
+@import './structures/forms';
+@import './structures/thumb-list-sxs';
+
 @import './tools';

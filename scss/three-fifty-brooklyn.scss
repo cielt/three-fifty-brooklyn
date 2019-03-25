@@ -38,11 +38,41 @@ h6 {
   margin: 0 0 0.5em 0;
 }
 
+p {
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+
 .max-w {
   max-width: $b-maxWidth;
   margin: 0 auto;
+
+  &.max-l {
+    max-width: $b-maxWidth-l; 
+  }
+
+  &.max-m {
+    max-width: $b-maxWidth-m; 
+  }
 }
 
+@font-face {
+  font-family: 'Graph Bold Condensed';
+  src: url('./fonts/graph-ff-condensed-black-web.eot?#iefix') format('eot'),
+    url('./fonts/graph-ff-condensed-black-web.woff') format('woff'),
+    url('./fonts/graph-ff-condensed-black-web.ttf') format('truetype'),
+    url('./fonts/graph-ff-condensed-black-web.woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Klima';
+  src: url('./fonts/klima-heavy-web.otf?#iefix') format('eot'),
+    url('./fonts/klima-heavy-web.woff') format('woff'),
+    url('./fonts/klima-heavy-web.ttf') format('truetype'),
+    url('./fonts/klima-heavy-web.woff2');
+  font-weight: bolder;
+}
 
 // -------------------------------------
 //   GLOBAL
@@ -50,6 +80,16 @@ h6 {
 
 .page {
   position: relative;
+}
+
+/* Global Type Styles */
+
+.section-header {
+  font-size: $b-fontSize-h4;
+  text-transform: uppercase;
+  font-family: $b-fontFamily-klima;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
 // -------------------------------------
@@ -260,4 +300,12 @@ h6 {
     animation: bounce none;
     background-color: rgba(255, 255, 255, 0.36);   
   }
+}
+
+// -------------------------------------
+//   CONTENT :: Section
+// -------------------------------------
+
+.section-wrapper {
+  padding: $b-space-3 $b-space-2;
 }

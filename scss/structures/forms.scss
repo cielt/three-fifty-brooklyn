@@ -1,0 +1,104 @@
+// =====================================
+//
+//   Forms
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -------------------------------------
+//   CONTENT :: Sign Up Form
+// -------------------------------------
+
+// TODO: extract common grid-wrapper CSS to module
+
+.inline-form-wrapper {
+  display: grid;
+  padding: $b-space-3 $b-space-2;
+  grid-template-columns: auto 1fr;
+  grid-gap: ($g-gap * 2);
+  align-items: center;
+  justify-items: start;
+
+  .section-header {
+    align-self: start;
+  }
+}
+
+.form-block {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: $g-gap;
+  align-items: center;
+
+  .form-list-inline {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    padding: 0;
+
+    .form-list-item {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.form-list-item {
+  position: relative;
+
+  input.text-input-inline {
+    position: relative;
+    z-index: 1;
+    display: block;
+    border: none;
+    background: $brand350-pale-blue0;
+    line-height: 1; // 18
+    font-size: $b-fontSize-l;
+    padding: $b-space-3 $b-space-1 $b-space-1;
+    border: 1px solid $brand350-blue-grey0;
+    min-width: em(320px, 18px);
+    color: $brand350-blue0;
+    font-weight: bold;
+    
+    &.first-inline {
+      border-right: none;
+      border-top-left-radius: $b-borderRad-1;
+      border-bottom-left-radius: $b-borderRad-1;
+    }
+
+    &.last-inline {
+      border-top-right-radius: $b-borderRad-1;
+      border-bottom-right-radius: $b-borderRad-1;
+    }
+  }
+
+  .label-overlaid {
+    position: absolute;
+    z-index: 2;
+    font-size: $b-fontSize-xs;
+    font-family: $b-fontFamily-klima;
+    color: $brand350-green-black0;
+    padding: $b-space-2;
+    padding-bottom: 0;
+    font-weight: bold;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+// <div class="form-block">
+//   <ol class="form-list">
+// <li class="form-list-item">
+//                         <label for="fullName">Full Name</label><input id="fullName" type="text" class="text-input-inline first-inline" />
+//                       </li>
+//                       <li class="form-list-item">
+//                         <label for="emailAddress">Email</label><input id="emailAddress" type="email" class="text-input-inline last-inline" />
+//                       </li>
+//   </ol>
+//   <button class="btn-round btn-orange" type="submit">Sign Up</button>
+// </div>

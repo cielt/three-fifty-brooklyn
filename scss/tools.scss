@@ -421,10 +421,39 @@
   padding-top: $b-space-6;
 }
 
+// -------------------------------------
+//   Colors :: BG
+// -------------------------------------
+
+.bg-white {
+  background: $white;
+}
+
+.bg-brand350-green-black0 {
+  background-color: $brand350-green-black0;
+  color: $white;
+}
+
+
+// -------------------------------------
+//   Colors :: Type
+// -------------------------------------
+
+.c-white {
+  color: $white;
+}
+
+.c-350-blue {
+  color: $brand350-blue0;
+}
 
 // -------------------------------------
 //   Text Utils
 // -------------------------------------
+
+.t-ff-klima {
+  font-family: 'Klima', sans-serif;  
+}
 
 .vis-hidden {
   @include hide-text;

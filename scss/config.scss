@@ -51,6 +51,7 @@ $c-text: $black;
 // ----- Typography ----- //
 
 $b-fontFamily: "helvetica neue", helvetica, sans-serif;
+$b-fontFamily-klima: "Klima", sans-serif;
 $b-heading-fontFamily: $b-fontFamily;
 $b-fontSize: 16px; // HTML
 $b-fontSize-xs: em(12px);
@@ -67,8 +68,8 @@ $b-lineHeight: 1.5;
 
 // ----- Border Radius ----- //
 
-$b-borderRad-1: 3px;
-$b-borderRad-2: 6px;
+$b-borderRad-1: 6px;
+$b-borderRad-2: 12px;
 $b-borderStyle: solid;
 
 // ----- Border Width ----- //
@@ -79,7 +80,6 @@ $b-borderWidth-m: 3px;
 
 // ----- Sizing ----- //
 
-$b-maxWidth: em(1440px);
 $b-space-1: em(5px);
 $b-space-2: em(10px); // v spacing, default type
 $b-space-3: em(15px);
@@ -97,14 +97,19 @@ $b-space-6: em(60px);
 
 $g-xs: em(480px);
 $g-s: em(768px);
-$g-m: em(959px);
+$g-m: em(960px);
 $g-l: em(1200px);
+
+$b-maxWidth: em(1440px);
+$b-maxWidth-l: $g-l;
+$b-maxWidth-m: $g-m;
+
 
 // Settings
 
 $g-columns: 12;
 $g-defaults: 'xs' $g-xs, 's' $g-s, 'm' $g-m, 'l' $g-l;
-$g-gutter: $b-space-4; // 20px
+$g-gap: $b-space-4; // 20px
 
 // CSS Grid
 
@@ -114,4 +119,4 @@ $b-global-menu-minWidth: em(120px);
 // Structures - Sizes
 
 $b-header-height: em(54px);
-
+$b-inline-bar-module-height: em(88px);
