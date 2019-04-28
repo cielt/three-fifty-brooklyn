@@ -1,0 +1,21 @@
+// =====================================
+//
+//   Thumbnail List - stacked
+//   grid-wrapper variant
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// TODO: split into panes of 3 items each (or fewer in mobile);
+.thumb-list-stacked {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  grid-gap: $g-gap * 2;
+}

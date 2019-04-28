@@ -1,6 +1,7 @@
 // =====================================
 //
 //   Forms
+//   grid-wrapper variant
 //
 // =====================================
 
@@ -56,7 +57,7 @@
     display: block;
     border: none;
     background: $brand350-pale-blue0;
-    line-height: 1; // 18
+    line-height: $b-lineHeight;
     font-size: $b-fontSize-l;
     padding: $b-space-3 $b-space-1 $b-space-1;
     border: 1px solid $brand350-blue-grey0;
@@ -90,15 +91,3 @@
     left: 0;
   }
 }
-
-// <div class="form-block">
-//   <ol class="form-list">
-// <li class="form-list-item">
-//                         <label for="fullName">Full Name</label><input id="fullName" type="text" class="text-input-inline first-inline" />
-//                       </li>
-//                       <li class="form-list-item">
-//                         <label for="emailAddress">Email</label><input id="emailAddress" type="email" class="text-input-inline last-inline" />
-//                       </li>
-//   </ol>
-//   <button class="btn-round btn-orange" type="submit">Sign Up</button>
-// </div>

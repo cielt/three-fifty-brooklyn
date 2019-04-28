@@ -38,9 +38,18 @@ h6 {
   margin: 0 0 0.5em 0;
 }
 
+ul, ol, dl {
+  list-style-type: none;
+  padding: 0;
+}
+
 p {
   line-height: 1.5;
   margin: 0 0 1em 0;
+}
+
+a:link, a:active, a:hover, a:visited {
+  color: $brand350-blue0;
 }
 
 .max-w {
@@ -170,7 +179,7 @@ p {
   }
 
   // link styles
-  a:link {
+  a:link, a:active, a:hover, a:visited {
     display: block;
     color: $white;
     line-height: $b-header-height;
@@ -275,7 +284,7 @@ p {
 
 .marquee-main:hover {
   .hero-overlay {
-    box-shadow:         inset 0 0 em(48px) $black;
+    box-shadow: inset 0 0 em(48px) $black;
     opacity: 0.84;
   }
 }
@@ -307,5 +316,5 @@ p {
 // -------------------------------------
 
 .section-wrapper {
-  padding: $b-space-3 $b-space-2;
+  padding: $b-space-4 $b-space-2;
 }
