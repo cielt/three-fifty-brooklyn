@@ -429,13 +429,21 @@
   background: $white;
 }
 
-.bg-brand350-green-black0 {
+.bg-350-green-black0 {
   background-color: $brand350-green-black0;
   color: $white;
 }
 
-.bg-brand350-pale-blue0 {
+.bg-350-pale-blue0 {
   background-color: $brand350-pale-blue0;
+}
+
+.bg-350-blue0 {
+  background-color: $brand350-blue0;
+
+  a:link, a:active, a:hover, a:visited {
+    color: $white;
+  }
 }
 
 

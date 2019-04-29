@@ -13,13 +13,41 @@
 //   Base
 // -------------------------------------
 
+.thumb-link {
+  display: block;
+}
+
 .thumbnail {
+  position: relative;
   overflow: hidden;
 
   & > img {
     display: block;
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  & > .thumb-ribbon {
+    position: absolute;
+    z-index: 2;
+    width: em(180px, 12px);
+    text-transform: uppercase;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin-top: 25px;
+    margin-left: -50px;
+    line-height: 2;
+    font-size: $b-fontSize-xs;
+    font-weight: bold;
+    transform: rotateZ(-45deg);
+
+    &.ribbon-blue-green {
+      background-color: $brand350-blue-green0;
+      color: $brand350-green-black0;
+    }
   }
 
   &.event-thumbnail {
@@ -27,8 +55,8 @@
     height: em(144px);
   }
 
-  &.news-thumbnail {
-    width: em(320px);
+  &.stacked-thumbnail {
+    width: 100%;
     height: em(160px);
   }
 }

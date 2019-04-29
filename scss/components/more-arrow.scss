@@ -1,0 +1,34 @@
+// =====================================
+//
+//   More Arrow
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$more-btn-diameter: em(24px);
+$current-more-btn-bg-color: $brand350-gold-orange0;
+$completed-more-btn-bg-color: $brand350-green-black0;
+
+.more-arrow {
+  display: inline-block;
+  width: $more-btn-diameter;
+  height: $more-btn-diameter;
+  color: $white;
+  font-size: $b-fontSize-xs;
+  text-align: center;
+  line-height: $more-btn-diameter;
+  border-radius: 50%;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  padding-left: 2px;
+
+  &.current-more {
+    background-color: $current-more-btn-bg-color;
+  }
+
+  &.completed-more {
+    background-color: $completed-more-btn-bg-color;
+  }
+}
