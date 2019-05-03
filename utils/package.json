@@ -13,8 +13,8 @@
   "author": "350Brooklyn",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-if": "^2.0.2",
     "gulp-sass": "^4.0.2"
   },
