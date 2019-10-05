@@ -12,9 +12,15 @@
   },
   "author": "350Brooklyn",
   "license": "ISC",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie < 10",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-if": "^3.0.0",
     "gulp-sass": "^4.0.2"
   },
