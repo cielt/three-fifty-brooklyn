@@ -9,9 +9,11 @@
 //   Variables
 // -------------------------------------
 
-$btn-fontSize-default: 16px;
-$btn-fontSize-l: 21px;
+$btn-fontSize-default: 14px;
 $btn-fontSize-xl: 24px;
+
+$btn-height-default: 36px;
+$btn-height-xl: 54px;
 
 
 // -------------------------------------
@@ -32,36 +34,30 @@ button {
 .btn-round {
   display: inline-block;
   padding: 0 $b-space-3;
-  line-height: 2;
-  border-radius: $btn-fontSize-default;
-  font-weight: normal;
+  line-height: $btn-height-default/$btn-fontSize-default;
+  border-radius: $btn-height-default/2;
+  font-family: $b-fontFamily-klima;
   text-transform: uppercase;
   text-decoration: none;
+  font-size: $btn-fontSize-default;
 
   &.btn-orange {
     color: $white;
     background-color: $brand350-gold-orange0;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
   }
 
   &.btn-red-orange {
     color: $white;
     background-color: $brand350-red-orange0;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
   }
 }
 
 /* Button XL */
 
 .btn-round {
-  &.btn-l {
-    font-size: $btn-fontSize-l;
-    border-radius: $btn-fontSize-l;
-  }
-
   &.btn-xl {
     font-size: $btn-fontSize-xl;
-    border-radius: $btn-fontSize-xl;
-    font-weight: bold;
+    border-radius: $btn-height-xl/2;
+    line-height: $btn-height-xl/$btn-fontSize-xl;
   }
 }
