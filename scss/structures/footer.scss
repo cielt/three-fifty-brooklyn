@@ -8,17 +8,23 @@
 //   Variables
 // -------------------------------------
 
-$footer-branding-col-width: 360px;
-$footer-nav-col-width: 160px;
+$footer-branding-col-width: 480px;
+$footer-nav-col-width: 320px;
 
 // -------------------------------------
 //   Base
 // -------------------------------------
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: $footer-branding-col-width $footer-nav-col-width $footer-nav-col-width 1fr;
-  grid-gap: ($g-gap * 3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  & > * {
+    flex: 0 0 $footer-branding-col-width;
+    margin-bottom: $g-gap;
+  }
 }
 
 .footer-branding {
@@ -30,15 +36,34 @@ $footer-nav-col-width: 160px;
   }
 }
 
+.footer-power-nav {
+  flex-basis: $footer-nav-col-width;
+}
+
 .power-nav-list {
-  & > li {
-    display: block;
-    margin-bottom: $b-space-2;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    flex: 1 0 50%;
+    margin-bottom: $b-space-4;
   }
 
   .power-nav-link {
     color: $white;
     text-decoration: none;
     font-weight: bold;
+  }
+}
+
+@media (min-width: $g-m) {
+  .footer-power-nav {
+    padding-top: 22px;
+  }
+}
+
+@media (min-width: $g-s) {
+  .power-nav-list li {
+    margin-bottom: $b-space-2;
   }
 }
